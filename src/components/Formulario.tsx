@@ -1,4 +1,4 @@
-import { BaseSyntheticEvent, useState } from 'react';
+import { useState } from 'react';
 
 interface Cita {
     nombre:string;
@@ -27,7 +27,7 @@ export const Formulario = () => {
      * !
      * @param e 
      */
-    const handleChange = (e:BaseSyntheticEvent | any) => {
+    const handleChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         // console.log(e);
         
         setCita({
@@ -39,7 +39,7 @@ export const Formulario = () => {
      * 
      * @param e 
      */
-    const handleSubmit = (e:any) => {
+    const handleSubmit = (e:React.ChangeEvent<HTMLFormElement>) => { //ChangeEvent / React.FormEventHandler<HTMLFormElement> / React.MouseEvent<HTMLButtonElement>
         e.preventDefault()
 
         // Validar
@@ -53,7 +53,7 @@ export const Formulario = () => {
 
     return (
         <>
-            <h2>Crear Cita</h2>
+            <h2 className='text-6xl'>Crear Cita</h2>
 
             {error ? <p className='alerta-error'>Todos los campos son Obligatorios</p>: null}
 
@@ -72,7 +72,7 @@ export const Formulario = () => {
                     value={nombre}
                 />
 
-                <label htmlFor="obra">Obra Social:</label>
+                <label htmlFor="obra" className='mt-4'>Obra Social:</label>
                 <input 
                     type="text" 
                     name="obra"
@@ -82,7 +82,7 @@ export const Formulario = () => {
                     onChange={handleChange}
                     value={obra}
                 />
-                <label htmlFor="">Fecha:</label>
+                <label htmlFor="fecha" className='mt-4'>Fecha:</label>
                 <input 
                     type="date" 
                     name="fecha" 
@@ -91,7 +91,7 @@ export const Formulario = () => {
                     onChange={handleChange}
                     value={fecha}
                 />
-                <label htmlFor="hora">Hora:</label>
+                <label htmlFor="hora" className='mt-4'>Hora:</label>
                 <input 
                     type="time" 
                     name="hora" 
@@ -100,7 +100,7 @@ export const Formulario = () => {
                     onChange={handleChange}
                     value={hora}
                 />
-                <label htmlFor="sintomas">Síntomas:</label>
+                <label htmlFor="sintomas" className='mt-4'>Síntomas:</label>
                 <textarea 
                     name="sintomas" 
                     id="sintomas" 
@@ -113,7 +113,7 @@ export const Formulario = () => {
                     </textarea>
                 <button 
                     type="submit"
-                    className="u-full-width button-primary"
+                    className="u-full-width bg-emerald-400 shadow-lg shadow-esmerald-500/50 border-esmerald-600 rounded-2xl mt-4"
                     >
                         Enviar
                 </button>

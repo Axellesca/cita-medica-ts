@@ -11,7 +11,7 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <div className="one-half column">
+          <div className="one-half column p-10">
             <Formulario/>
           </div>
           <div className="one-half column">

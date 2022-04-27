@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: linear-gradient(-225deg, #4fb9ff 0%, #056eaa 52%, #0a7cfd 100%);
+  background-image: linear-gradient(-225deg, #90EE90 0%, #90EE90 52%, #98FB98 100%);
   min-height: 100%;
   padding-bottom: 5rem;
 }
@@ -87,8 +87,8 @@ input[type="time"] {
 }
 
 .alerta-error {
-  background-color: white;
-  color: red;
+  background-color: rgb(218, 40, 40);
+  color: rgb(255, 255, 255);
   padding: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
