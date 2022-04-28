@@ -1,12 +1,7 @@
 import { useState } from 'react';
+import type { Cita } from '../types/Cita';
 
-interface Cita {
-    nombre:string;
-    obra:string;
-    fecha:string;
-    hora:string;
-    sintomas:string;
-}
+
 
 export const Formulario = () => {
     
