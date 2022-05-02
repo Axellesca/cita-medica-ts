@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import type { Cita } from '../types/Cita';
+import type { Cita, FormArgs } from '../types/Cita';
+import {v4 as uuid} from 'uuid';
 
 
-
-export const Formulario = () => {
+export const Formulario = ({crearCita}:FormArgs) => {
     
     const [cita, setCita] = useState<Cita>({
         nombre: '',
         obra: '',
         fecha: '',
         hora: '',
-        sintomas: ''
+        sintomas: '',
+        id:''
     });
 
     const [error, setError] = useState<Boolean>(false);
@@ -41,9 +42,22 @@ export const Formulario = () => {
         if(nombre.trim() === '' || obra.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === ''){
             setError(true);
             return;
-        }else{
-
         }
+        setError(false);
+        //ID:
+        console.log(cita);
+        cita.id = uuid();
+        //Pasar Cita por props
+        crearCita(cita);
+        //Reiniciar Form
+        setCita({
+            nombre: '',
+            obra: '',
+            fecha: '',
+            hora: '',
+            sintomas: '',
+            id:''
+        })
     }
 
     return (
@@ -55,6 +69,7 @@ export const Formulario = () => {
             <form 
                 action=""
                 onSubmit={handleSubmit}
+                className='cita'
             >
                 <label htmlFor="nombre">Nombre:</label>
                 <input 
