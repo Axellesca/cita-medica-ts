@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/citas-ts/static/css/main.39bbd13c.css",
+    "main.js": "/citas-ts/static/js/main.145414c3.js",
+    "static/js/787.ffbd49aa.chunk.js": "/citas-ts/static/js/787.ffbd49aa.chunk.js",
+    "index.html": "/citas-ts/index.html",
+    "main.39bbd13c.css.map": "/citas-ts/static/css/main.39bbd13c.css.map",
+    "main.145414c3.js.map": "/citas-ts/static/js/main.145414c3.js.map",
+    "787.ffbd49aa.chunk.js.map": "/citas-ts/static/js/787.ffbd49aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39bbd13c.css",
+    "static/js/main.145414c3.js"
+  ]
+}
