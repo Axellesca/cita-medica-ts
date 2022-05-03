@@ -1,4 +1,4 @@
-import { Cita, CitasArgs, } from '../types/Cita';
+import { CitasArgs } from '../types/Cita';
 
 
 export const CitaComponent = ({args,handleDelete}:CitasArgs) => { //args:Cita,handleDelete
@@ -9,11 +9,11 @@ export const CitaComponent = ({args,handleDelete}:CitasArgs) => { //args:Cita,ha
 
     return (
         <div className='cita mt-3'>
-            <p>Nombre: {args.nombre}</p>
-            <p>Obra Social: {args.obra}</p>
-            <p>Fecha: {args.fecha}</p>
-            <p>Hora: {args.hora}</p>
-            <p>Sintomas Paciente: {args.sintomas}</p>
+            <p className=''>Nombre: <span className='font-mono text-gray-900'>{args.nombre}</span></p>
+            <p>Obra Social: <span className='font-mono text-gray-900'>{args.obra}</span></p>
+            <p>Fecha: <span className='font-mono text-gray-900'>{args.fecha}</span></p>
+            <p>Hora: <span className='font-mono text-gray-900'>{args.hora}</span></p>
+            <p>Sintomas Paciente: <span className='font-mono text-gray-900'>{args.sintomas}</span></p>
             <button
                 className='bg-red-400 shadow-lg shadow-red-500/50 border-black-600 rounded-2xl u-full-width'
                 onClick={() => handleDelete(args.id)}
